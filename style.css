@@ -1,0 +1,12 @@
+table {
+  background-color: rgb(171, 201, 228);
+  padding: 10px;
+  font-family: sans-serif;
+}
+.delete{
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.invisible{
+  display: none;
+}
