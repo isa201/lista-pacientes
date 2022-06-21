@@ -1,12 +1,152 @@
-table {
-  background-color: rgb(171, 201, 228);
-  padding: 10px;
-  font-family: sans-serif;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Kanit", sans-serif;
 }
-.delete{
+.delete {
   opacity: 0;
   transition: opacity 0.5s;
 }
-.invisible{
+.invisible {
   display: none;
+}
+
+/*ESTILOS CON FLEXBOX
+
+.header-principal .container {
+  display: flex;
+  padding: 15px;
+  align-items: center; alinear los items verticalmente en el centro
+  justify-content: space-between; espacio entre elementos dentro del div(container),alinear horizontalmente
+  background-color: bisque;
+}
+
+.menu {
+  display: flex;
+}
+.menu label {
+  margin-right: 10px;
+}
+
+.content-principal {
+  background-color: aquamarine;
+  display: flex;
+  height: 300px;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-pacientes {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 200px;
+  padding: 15px;
+  justify-content: center;
+}
+.barra-lateral {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(87, 87, 191);
+  align-items: center;
+  width: 40%;
+  height: 200px;
+  padding: 15px;
+}
+
+.barra-lateral #adicionar-paciente {
+  margin-top: 10px;
+}
+.footer .container {
+  background-color: bisque;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+}
+*/
+header {
+  background-color: rgb(29, 30, 30);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: aliceblue;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(67, 67, 73);
+  justify-content: flex-end;
+  padding: 20px;
+  flex-wrap: no-wrap;
+}
+
+.content-principal {
+  display: flex;
+  /*Elementos dentro se comportan como filas*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+}
+.content-principal section {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  background-color: rgba(171, 218, 130, 0.388);
+  align-items: center;
+}
+.content-principal table,
+td,
+th {
+  background-color: rgb(179, 175, 175);
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 30px;
+  padding: 3px;
+}
+
+.content-principal aside {
+  display: flex;
+  /*Al ser una columna el eje principal se da vuelta y
+   pasa a ser vertical justify-content y align-items horizontal
+  */
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(130, 124, 124);
+}
+.content-principal aside h2 {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.content-principal aside form {
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid black;
+}
+.content-principal aside form label,
+input {
+  float: left;
+  outline: none;
+}
+.content-principal aside button {
+  margin-top: 5px;
+  font-size: 11px;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(48, 49, 48);
+  height: 50px;
+  line-height: 50px;
+  color: aliceblue;
+}
+
+#alert {
+  margin-top: 5px;
+  color: black;
+  font-weight: bold;
 }

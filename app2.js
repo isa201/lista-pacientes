@@ -88,9 +88,13 @@ function validarPaciente(paciente, mensaje) {
       "Verifique que esten todos los datos ingresados en el formulario"
     );
     mensaje.textContent = "Error verifique los datos del formulario";
+    mensaje.style.backgroundColor = "rgb(205, 123, 109)";
+    mensaje.style.padding = "5px";
     return false;
   } else {
     mensaje.textContent = "Registro exitoso del paciente";
+    mensaje.style.backgroundColor = "rgb(100, 191, 100)";
+    mensaje.style.padding = "5px";
     return true;
   }
 }
