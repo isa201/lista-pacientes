@@ -11,60 +11,6 @@
   display: none;
 }
 
-/*ESTILOS CON FLEXBOX
-
-.header-principal .container {
-  display: flex;
-  padding: 15px;
-  align-items: center; alinear los items verticalmente en el centro
-  justify-content: space-between; espacio entre elementos dentro del div(container),alinear horizontalmente
-  background-color: bisque;
-}
-
-.menu {
-  display: flex;
-}
-.menu label {
-  margin-right: 10px;
-}
-
-.content-principal {
-  background-color: aquamarine;
-  display: flex;
-  height: 300px;
-  padding: 15px;
-  align-items: center;
-  justify-content: space-between;
-}
-.section-pacientes {
-  display: flex;
-  align-items: center;
-  width: 60%;
-  height: 200px;
-  padding: 15px;
-  justify-content: center;
-}
-.barra-lateral {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(87, 87, 191);
-  align-items: center;
-  width: 40%;
-  height: 200px;
-  padding: 15px;
-}
-
-.barra-lateral #adicionar-paciente {
-  margin-top: 10px;
-}
-.footer .container {
-  background-color: bisque;
-  display: flex;
-  padding: 15px;
-  align-items: center;
-  justify-content: center;
-}
-*/
 header {
   background-color: rgb(29, 30, 30);
   height: 50px;
@@ -81,13 +27,18 @@ nav {
   padding: 20px;
   flex-wrap: no-wrap;
 }
+nav label,
+input,
+button {
+  margin-left: 5px;
+}
 
 .content-principal {
   display: flex;
   /*Elementos dentro se comportan como filas*/
   flex-direction: row;
   flex-wrap: wrap;
-  height: 300px;
+  height: 500px;
 }
 .content-principal section {
   display: flex;
@@ -149,4 +100,42 @@ footer {
   margin-top: 5px;
   color: black;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .content-principal {
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+  }
+  .content-principal section {
+    width: 100%;
+    height: 50%;
+    flex-wrap: wrap;
+  }
+  .content-principal aside {
+    width: 100%;
+    height: 50%;
+    flex-wrap: wrap;
+  }
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    align-items: center;
+  }
+  nav label,
+  input,
+  button {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  header h1 {
+    font-size: 15px;
+  }
+  .content-principal table,
+  td,
+  th {
+    height: 20px;
+  }
 }
