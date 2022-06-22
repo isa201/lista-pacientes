@@ -61,6 +61,7 @@ th {
   display: flex;
   /*Al ser una columna el eje principal se da vuelta y
    pasa a ser vertical justify-content y align-items horizontal
+   align-content sirve para alinear los objetos segun el sentido del flex direction
   */
   flex-direction: column;
   width: 50%;
